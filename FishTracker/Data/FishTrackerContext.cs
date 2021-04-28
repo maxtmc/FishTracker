@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using FishTracker.Models;
 
 namespace FishTracker.Models
 {
@@ -15,5 +16,11 @@ namespace FishTracker.Models
         }
 
         public DbSet<FishTracker.Models.Catch> Catch { get; set; }
+
+        public DbSet<FishTracker.Models.Weather> Weather { get; set; }
+
+        public DbSet<FishTracker.Models.Image> Image { get; set; }
+
+        public DbSet<FishTracker.Models.Water> Water { get; set; }
     }
 }

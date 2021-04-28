@@ -1,0 +1,45 @@
+﻿@model FishTracker.Models.Water
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Water</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WaterID" />
+            <div class="form-group">
+                <label asp-for="Temp" class="control-label"></label>
+                <input asp-for="Temp" class="form-control" />
+                <span asp-validation-for="Temp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clarity" class="control-label"></label>
+                <input asp-for="Clarity" class="form-control" />
+                <span asp-validation-for="Clarity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalFishCaught" class="control-label"></label>
+                <input asp-for="TotalFishCaught" class="form-control" />
+                <span asp-validation-for="TotalFishCaught" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

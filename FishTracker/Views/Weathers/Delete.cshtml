@@ -1,0 +1,52 @@
+﻿@model FishTracker.Models.Weather
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Weather</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Temp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Temp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BarPressure)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BarPressure)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OvercastConditions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OvercastConditions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalFishCaught)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalFishCaught)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="WeatherID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -16,7 +16,7 @@ namespace FishTracker.Controllers
             this.roleManager = roleManager;
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult CreateRole()
         {
             return View();
